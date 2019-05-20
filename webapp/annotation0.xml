@@ -133,8 +133,7 @@
 									<PropertyValue Property="LocalDataProperty" PropertyPath="Zjumin"/>
 									<PropertyValue Property="ValueListProperty" String="Zjumin"/>
 								</Record>
-								<Record Type="Common.ValueListParameterOut">
-									<PropertyValue Property="LocalDataProperty" PropertyPath="head_np_juming/Text"/>
+								<Record Type="Common.ValueListParameterDisplayOnly">
 									<PropertyValue Property="ValueListProperty" String="Text"/>
 								</Record>
 							</Collection>
