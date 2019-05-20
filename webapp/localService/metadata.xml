@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="1.0" xmlns:edmx="http://schemas.microsoft.com/ado/2007/06/edmx"
+	xmlns:m="http://schemas.microsoft.com/ado/2007/08/dataservices/metadata" xmlns:sap="http://www.sap.com/Protocols/SAPData">
+	<edmx:DataServices m:DataServiceVersion="2.0">
+		<Schema Namespace="ZBP_ODATA_SRV" xml:lang="zh" sap:schema-version="1" xmlns="http://schemas.microsoft.com/ado/2008/09/edm">
+			<EntityType Name="butypeCategory" sap:content-version="1">
+				<Key><PropertyRef Name="BuType"/></Key><Property Name="BuType" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="合作伙伴类别" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Text" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="描述" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="idTypeCategory" sap:content-version="1">
+				<Key><PropertyRef Name="Type"/></Key><Property Name="Type" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="标识类型" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Text" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="描述" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="titleCategory" sap:content-version="1">
+				<Key><PropertyRef Name="TitleKey"/></Key><Property Name="TitleKey" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="姓名的附加称呼" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="TitleDscr" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="后缀说明" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="jumingCategory" sap:content-version="1">
+				<Key><PropertyRef Name="Zjumin"/></Key><Property Name="Zjumin" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="居民标识" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Text" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="描述" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="regionCategory" sap:content-version="1">
+				<Key><PropertyRef Name="Land1"/><PropertyRef Name="Bland"/></Key><Property Name="Land1" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="国家/地区" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false"/><Property Name="Bland" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="地区" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Bezei" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="描述" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="bpHead" sap:content-version="1">
+				<Key><PropertyRef Name="Partner"/></Key><Property Name="Birthdt" Type="Edm.DateTime" Nullable="false" Precision="7" sap:unicode="false" sap:label="出生日期" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Partner" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="业务伙伴" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Dateid" Type="Edm.String" Nullable="false" MaxLength="17" sap:unicode="false" sap:label="时间戳" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zzresearch" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:label="主要研究方向" sap:creatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Type" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="合作伙伴类别" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="ZzgenerIntro" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:label="简介" sap:creatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Bpkind" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="合作伙伴类型" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zzwork" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:label="著作" sap:creatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="NameFirst" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="姓" sap:creatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Zzbz" Type="Edm.String" Nullable="false" MaxLength="200" sap:unicode="false" sap:label="备注" sap:creatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="NameLast" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="名" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Nickname" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="别名" sap:creatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="TitleRoyl" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="姓名的附加称呼" sap:creatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Initials" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="初始" sap:creatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="TitleLet" Type="Edm.String" Nullable="false" MaxLength="50" sap:unicode="false" sap:label="问候" sap:creatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="BuLangu" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="语言" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="BuSort1" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="搜索词 1" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="BuSort2" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="搜索词 2" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Street" Type="Edm.String" Nullable="false" MaxLength="60" sap:unicode="false" sap:label="街道" sap:creatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="PostCode1" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="邮政编码" sap:creatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="City1" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="城市" sap:creatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Country" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="国家/地区" sap:creatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Region" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="地区" sap:creatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="TelNumber" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="固定电话" sap:creatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="TelExtens" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="分机号" sap:creatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="MobNumber" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="移动电话" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="FaxNumber" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="传真" sap:creatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="SmtpAddr" Type="Edm.String" Nullable="false" MaxLength="241" sap:unicode="false" sap:label="电子邮件地址" sap:creatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Xsexu" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="性别" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Natio" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="国籍" sap:creatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Bpext" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="证件编号" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Emplo" Type="Edm.String" Nullable="false" MaxLength="35" sap:unicode="false" sap:label="雇主" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="NameOrg1" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="名称 1" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="NameOrg2" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="名称 2" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="NameOrg3" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="名称 3" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="NameOrg4" Type="Edm.String" Nullable="false" MaxLength="40" sap:unicode="false" sap:label="名称 4" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="LegalEnty" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="法律表格" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="LegalOrg" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="法律实体" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="FoundDat" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="组织建立日期" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="LiquidDat" Type="Edm.String" Nullable="false" MaxLength="8" sap:unicode="false" sap:label="组织的清算日期" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Location2" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="国际区位码（部分 2）"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Location3" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="有关标准公司号的校验位"
+					sap:creatable="false" sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="DefltComm" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="通讯方法" sap:creatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Idtype" Type="Edm.String" Nullable="false" MaxLength="6" sap:unicode="false" sap:label="标识类型" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zjumin" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="居民标识" sap:creatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Zrycj" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="是否残疾" sap:creatable="false" sap:sortable="false"
+					sap:filterable="false"/><Property Name="Zrycjzh" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="残疾证号" sap:creatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Zryls" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="是否烈属" sap:creatable="false" sap:sortable="false"
+					sap:filterable="false"/><Property Name="Zrylszh" Type="Edm.String" Nullable="false" MaxLength="30" sap:unicode="false" sap:label="烈属证号" sap:creatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Zrygl" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="是否孤老" sap:creatable="false" sap:sortable="false"
+					sap:filterable="false"/><Property Name="Konzs" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="组" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Dtams" Type="Edm.String" Nullable="false" MaxLength="1" sap:unicode="false" sap:label="DME 标记" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Dtaws" Type="Edm.String" Nullable="false" MaxLength="2" sap:unicode="false" sap:label="指令码" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Xzemp" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="凭证上的收款人" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Esrnr" Type="Edm.String" Nullable="false" MaxLength="11" sap:unicode="false" sap:label="POR 号码" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Regss" Type="Edm.Boolean" Nullable="false" sap:unicode="false" sap:label="社会保险" sap:creatable="false" sap:updatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Actss" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="社会保险代码" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Begru" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="权限组" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="UpdateFlag" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="更新标志" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zuuid" Type="Edm.String" Nullable="false" MaxLength="32" sap:unicode="false" sap:label="UUID" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Datatype" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="处理类型" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Ernam" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="创建者" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><NavigationProperty Name="head_np_country" Relationship="ZBP_ODATA_SRV.F4Category_asso_Country" FromRole="ToRole_F4Category_asso_Country"
+					ToRole="FromRole_F4Category_asso_Country"/><NavigationProperty Name="head_np_butype" Relationship="ZBP_ODATA_SRV.F4Category_asso_Butype" FromRole="ToRole_F4Category_asso_Butype"
+					ToRole="FromRole_F4Category_asso_Butype"/><NavigationProperty Name="head_np_idtype" Relationship="ZBP_ODATA_SRV.F4Category_asso_Idtype" FromRole="ToRole_F4Category_asso_Idtype"
+					ToRole="FromRole_F4Category_asso_Idtype"/><NavigationProperty Name="head_np_title" Relationship="ZBP_ODATA_SRV.F4Category_asso_title" FromRole="ToRole_F4Category_asso_title"
+					ToRole="FromRole_F4Category_asso_title"/><NavigationProperty Name="head_np_juming" Relationship="ZBP_ODATA_SRV.F4Category_asso_juming" FromRole="ToRole_F4Category_asso_juming"
+					ToRole="FromRole_F4Category_asso_juming"/><NavigationProperty Name="head_np_region" Relationship="ZBP_ODATA_SRV.F4Category_asso_region" FromRole="ToRole_F4Category_asso_region"
+					ToRole="FromRole_F4Category_asso_region"/><NavigationProperty Name="head_np_bank" Relationship="ZBP_ODATA_SRV.head_asso_bank" FromRole="FromRole_head_asso_bank"
+					ToRole="ToRole_head_asso_bank"/><NavigationProperty Name="head_np_natio" Relationship="ZBP_ODATA_SRV.F4Category_asso_natio" FromRole="ToRole_F4Category_asso_natio"
+					ToRole="FromRole_F4Category_asso_natio"/><NavigationProperty Name="head_np_commtype" Relationship="ZBP_ODATA_SRV.F4Category_asso_commtype" FromRole="ToRole_F4Category_asso_commtype"
+					ToRole="FromRole_F4Category_asso_commtype"/></EntityType>
+			<EntityType Name="bpBank" sap:content-version="1">
+				<Key><PropertyRef Name="Partner"/><PropertyRef Name="Bkvid"/></Key><Property Name="Partner" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="业务伙伴" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Dateid" Type="Edm.String" Nullable="false" MaxLength="17" sap:unicode="false" sap:label="时间戳" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Bkvid" Type="Edm.String" Nullable="false" MaxLength="4" sap:unicode="false" sap:label="银行明细" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Banks" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="银行国家" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Bankn" Type="Edm.String" Nullable="false" MaxLength="18" sap:unicode="false" sap:label="银行帐户" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Bkref" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="参考" sap:creatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Koinh" Type="Edm.String" Nullable="false" MaxLength="60" sap:unicode="false" sap:label="帐户持有人" sap:creatable="false"
+					sap:sortable="false" sap:filterable="false"/><Property Name="Banka" Type="Edm.String" Nullable="false" MaxLength="60" sap:unicode="false" sap:label="银行名称" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="UpdateFlag" Type="Edm.String" Nullable="false" MaxLength="10" sap:unicode="false" sap:label="更新标志" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Zuuid" Type="Edm.String" Nullable="false" MaxLength="32" sap:unicode="false" sap:label="UUID" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Datatype" Type="Edm.String" Nullable="false" MaxLength="5" sap:unicode="false" sap:label="处理类型" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Ernam" Type="Edm.String" Nullable="false" MaxLength="12" sap:unicode="false" sap:label="创建者" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><NavigationProperty Name="bank_np_banks" Relationship="ZBP_ODATA_SRV.F4Category_asso_Banks" FromRole="ToRole_F4Category_asso_Banks"
+					ToRole="FromRole_F4Category_asso_Banks"/></EntityType>
+			<EntityType Name="natioCategory" sap:content-version="1">
+				<Key><PropertyRef Name="Land1"/></Key><Property Name="Land1" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="国家/地区" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="Natio" Type="Edm.String" Nullable="false" MaxLength="15" sap:unicode="false" sap:label="国籍" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<EntityType Name="commtypeCategory" sap:content-version="1">
+				<Key><PropertyRef Name="CommType"/></Key><Property Name="CommType" Type="Edm.String" Nullable="false" MaxLength="3" sap:unicode="false" sap:label="通讯方法" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/><Property Name="CommText" Type="Edm.String" Nullable="false" MaxLength="20" sap:unicode="false" sap:label="通信类型" sap:creatable="false"
+					sap:updatable="false" sap:sortable="false" sap:filterable="false"/></EntityType>
+			<Association Name="F4Category_asso_title" sap:content-version="1"><End Type="ZBP_ODATA_SRV.titleCategory" Multiplicity="0..1" Role="FromRole_F4Category_asso_title"/><End Type="ZBP_ODATA_SRV.bpHead" Multiplicity="0..1" Role="ToRole_F4Category_asso_title"/>
+				<ReferentialConstraint>
+					<Principal Role="FromRole_F4Category_asso_title"><PropertyRef Name="TitleKey"/></Principal>
+					<Dependent Role="ToRole_F4Category_asso_title"><PropertyRef Name="TitleRoyl"/></Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<Association Name="F4Category_asso_commtype" sap:content-version="1"><End Type="ZBP_ODATA_SRV.commtypeCategory" Multiplicity="0..1" Role="FromRole_F4Category_asso_commtype"/><End Type="ZBP_ODATA_SRV.bpHead" Multiplicity="0..1" Role="ToRole_F4Category_asso_commtype"/>
+				<ReferentialConstraint>
+					<Principal Role="FromRole_F4Category_asso_commtype"><PropertyRef Name="CommType"/></Principal>
+					<Dependent Role="ToRole_F4Category_asso_commtype"><PropertyRef Name="DefltComm"/></Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<Association Name="F4Category_asso_Butype" sap:content-version="1"><End Type="ZBP_ODATA_SRV.butypeCategory" Multiplicity="0..1" Role="FromRole_F4Category_asso_Butype"/><End Type="ZBP_ODATA_SRV.bpHead" Multiplicity="0..1" Role="ToRole_F4Category_asso_Butype"/>
+				<ReferentialConstraint>
+					<Principal Role="FromRole_F4Category_asso_Butype"><PropertyRef Name="BuType"/></Principal>
+					<Dependent Role="ToRole_F4Category_asso_Butype"><PropertyRef Name="Type"/></Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<Association Name="F4Category_asso_region" sap:content-version="1"><End Type="ZBP_ODATA_SRV.regionCategory" Multiplicity="0..1" Role="FromRole_F4Category_asso_region"/><End Type="ZBP_ODATA_SRV.bpHead" Multiplicity="0..1" Role="ToRole_F4Category_asso_region"/>
+				<ReferentialConstraint>
+					<Principal Role="FromRole_F4Category_asso_region"><PropertyRef Name="Land1"/><PropertyRef Name="Bland"/></Principal>
+					<Dependent Role="ToRole_F4Category_asso_region"><PropertyRef Name="Country"/><PropertyRef Name="Region"/></Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<Association Name="head_asso_bank" sap:content-version="1"><End Type="ZBP_ODATA_SRV.bpHead" Multiplicity="0..1" Role="FromRole_head_asso_bank"/><End Type="ZBP_ODATA_SRV.bpBank" Multiplicity="*" Role="ToRole_head_asso_bank"/>
+				<ReferentialConstraint>
+					<Principal Role="FromRole_head_asso_bank"><PropertyRef Name="Partner"/></Principal>
+					<Dependent Role="ToRole_head_asso_bank"><PropertyRef Name="Partner"/></Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<Association Name="F4Category_asso_Idtype" sap:content-version="1"><End Type="ZBP_ODATA_SRV.idTypeCategory" Multiplicity="0..1" Role="FromRole_F4Category_asso_Idtype"/><End Type="ZBP_ODATA_SRV.bpHead" Multiplicity="0..1" Role="ToRole_F4Category_asso_Idtype"/>
+				<ReferentialConstraint>
+					<Principal Role="FromRole_F4Category_asso_Idtype"><PropertyRef Name="Type"/></Principal>
+					<Dependent Role="ToRole_F4Category_asso_Idtype"><PropertyRef Name="Idtype"/></Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<Association Name="F4Category_asso_natio" sap:content-version="1"><End Type="ZBP_ODATA_SRV.natioCategory" Multiplicity="0..1" Role="FromRole_F4Category_asso_natio"/><End Type="ZBP_ODATA_SRV.bpHead" Multiplicity="0..1" Role="ToRole_F4Category_asso_natio"/>
+				<ReferentialConstraint>
+					<Principal Role="FromRole_F4Category_asso_natio"><PropertyRef Name="Land1"/></Principal>
+					<Dependent Role="ToRole_F4Category_asso_natio"><PropertyRef Name="Natio"/></Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<Association Name="F4Category_asso_Banks" sap:content-version="1"><End Type="ZBP_ODATA_SRV.natioCategory" Multiplicity="0..1" Role="FromRole_F4Category_asso_Banks"/><End Type="ZBP_ODATA_SRV.bpBank" Multiplicity="0..1" Role="ToRole_F4Category_asso_Banks"/>
+				<ReferentialConstraint>
+					<Principal Role="FromRole_F4Category_asso_Banks"><PropertyRef Name="Land1"/></Principal>
+					<Dependent Role="ToRole_F4Category_asso_Banks"><PropertyRef Name="Banks"/></Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<Association Name="F4Category_asso_Country" sap:content-version="1"><End Type="ZBP_ODATA_SRV.natioCategory" Multiplicity="0..1" Role="FromRole_F4Category_asso_Country"/><End Type="ZBP_ODATA_SRV.bpHead" Multiplicity="0..1" Role="ToRole_F4Category_asso_Country"/>
+				<ReferentialConstraint>
+					<Principal Role="FromRole_F4Category_asso_Country"><PropertyRef Name="Land1"/></Principal>
+					<Dependent Role="ToRole_F4Category_asso_Country"><PropertyRef Name="Country"/></Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<Association Name="F4Category_asso_juming" sap:content-version="1"><End Type="ZBP_ODATA_SRV.jumingCategory" Multiplicity="0..1" Role="FromRole_F4Category_asso_juming"/><End Type="ZBP_ODATA_SRV.bpHead" Multiplicity="0..1" Role="ToRole_F4Category_asso_juming"/>
+				<ReferentialConstraint>
+					<Principal Role="FromRole_F4Category_asso_juming"><PropertyRef Name="Zjumin"/></Principal>
+					<Dependent Role="ToRole_F4Category_asso_juming"><PropertyRef Name="Zjumin"/></Dependent>
+				</ReferentialConstraint>
+			</Association>
+			<EntityContainer Name="ZBP_ODATA_SRV_Entities" m:IsDefaultEntityContainer="true" sap:supported-formats="atom json xlsx"><EntitySet Name="butypeCategorySet" EntityType="ZBP_ODATA_SRV.butypeCategory" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:content-version="1"/><EntitySet Name="idTypeCategorySet" EntityType="ZBP_ODATA_SRV.idTypeCategory" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:content-version="1"/><EntitySet Name="titleCategorySet" EntityType="ZBP_ODATA_SRV.titleCategory" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:content-version="1"/><EntitySet Name="jumingCategorySet" EntityType="ZBP_ODATA_SRV.jumingCategory" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:content-version="1"/><EntitySet Name="regionCategorySet" EntityType="ZBP_ODATA_SRV.regionCategory" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:content-version="1"/><EntitySet Name="bpHeadSet" EntityType="ZBP_ODATA_SRV.bpHead" sap:creatable="false" sap:deletable="false" sap:pageable="false"
+				sap:content-version="1"/><EntitySet Name="bpBankSet" EntityType="ZBP_ODATA_SRV.bpBank" sap:creatable="false" sap:deletable="false" sap:pageable="false"
+				sap:content-version="1"/><EntitySet Name="natioCategorySet" EntityType="ZBP_ODATA_SRV.natioCategory" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:content-version="1"/><EntitySet Name="commtypeCategorySet" EntityType="ZBP_ODATA_SRV.commtypeCategory" sap:creatable="false" sap:updatable="false"
+				sap:deletable="false" sap:pageable="false" sap:content-version="1"/>
+				<AssociationSet Name="F4Category_asso_ButypeSet" Association="ZBP_ODATA_SRV.F4Category_asso_Butype" sap:creatable="false"
+					sap:updatable="false" sap:deletable="false" sap:content-version="1"><End EntitySet="butypeCategorySet" Role="FromRole_F4Category_asso_Butype"/><End EntitySet="bpHeadSet" Role="ToRole_F4Category_asso_Butype"/></AssociationSet>
+				<AssociationSet Name="F4Category_asso_titleSet" Association="ZBP_ODATA_SRV.F4Category_asso_title" sap:creatable="false"
+					sap:updatable="false" sap:deletable="false" sap:content-version="1"><End EntitySet="titleCategorySet" Role="FromRole_F4Category_asso_title"/><End EntitySet="bpHeadSet" Role="ToRole_F4Category_asso_title"/></AssociationSet>
+				<AssociationSet Name="F4Category_asso_jumingSet" Association="ZBP_ODATA_SRV.F4Category_asso_juming" sap:creatable="false"
+					sap:updatable="false" sap:deletable="false" sap:content-version="1"><End EntitySet="jumingCategorySet" Role="FromRole_F4Category_asso_juming"/><End EntitySet="bpHeadSet" Role="ToRole_F4Category_asso_juming"/></AssociationSet>
+				<AssociationSet Name="F4Category_asso_BanksSet" Association="ZBP_ODATA_SRV.F4Category_asso_Banks" sap:creatable="false"
+					sap:updatable="false" sap:deletable="false" sap:content-version="1"><End EntitySet="natioCategorySet" Role="FromRole_F4Category_asso_Banks"/><End EntitySet="bpBankSet" Role="ToRole_F4Category_asso_Banks"/></AssociationSet>
+				<AssociationSet Name="F4Category_asso_regionSet" Association="ZBP_ODATA_SRV.F4Category_asso_region" sap:creatable="false"
+					sap:updatable="false" sap:deletable="false" sap:content-version="1"><End EntitySet="regionCategorySet" Role="FromRole_F4Category_asso_region"/><End EntitySet="bpHeadSet" Role="ToRole_F4Category_asso_region"/></AssociationSet>
+				<AssociationSet Name="F4Category_asso_commtypeSet" Association="ZBP_ODATA_SRV.F4Category_asso_commtype" sap:creatable="false"
+					sap:updatable="false" sap:deletable="false" sap:content-version="1"><End EntitySet="commtypeCategorySet" Role="FromRole_F4Category_asso_commtype"/><End EntitySet="bpHeadSet" Role="ToRole_F4Category_asso_commtype"/></AssociationSet>
+				<AssociationSet Name="head_asso_bankSet" Association="ZBP_ODATA_SRV.head_asso_bank" sap:creatable="false" sap:updatable="false"
+					sap:deletable="false" sap:content-version="1"><End EntitySet="bpHeadSet" Role="FromRole_head_asso_bank"/><End EntitySet="bpBankSet" Role="ToRole_head_asso_bank"/></AssociationSet>
+				<AssociationSet Name="F4Category_asso_CountrySet" Association="ZBP_ODATA_SRV.F4Category_asso_Country" sap:creatable="false"
+					sap:updatable="false" sap:deletable="false" sap:content-version="1"><End EntitySet="natioCategorySet" Role="FromRole_F4Category_asso_Country"/><End EntitySet="bpHeadSet" Role="ToRole_F4Category_asso_Country"/></AssociationSet>
+				<AssociationSet Name="F4Category_asso_natioSet" Association="ZBP_ODATA_SRV.F4Category_asso_natio" sap:creatable="false"
+					sap:updatable="false" sap:deletable="false" sap:content-version="1"><End EntitySet="natioCategorySet" Role="FromRole_F4Category_asso_natio"/><End EntitySet="bpHeadSet" Role="ToRole_F4Category_asso_natio"/></AssociationSet>
+				<AssociationSet Name="F4Category_asso_IdtypeSet" Association="ZBP_ODATA_SRV.F4Category_asso_Idtype" sap:creatable="false"
+					sap:updatable="false" sap:deletable="false" sap:content-version="1"><End EntitySet="idTypeCategorySet" Role="FromRole_F4Category_asso_Idtype"/><End EntitySet="bpHeadSet" Role="ToRole_F4Category_asso_Idtype"/></AssociationSet>
+			</EntityContainer><atom:link rel="self" href="https://heps4dev:43000/sap/opu/odata/sap/ZBP_ODATA_SRV/$metadata" xmlns:atom="http://www.w3.org/2005/Atom"/><atom:link rel="latest-version" href="https://heps4dev:43000/sap/opu/odata/sap/ZBP_ODATA_SRV/$metadata"
+				xmlns:atom="http://www.w3.org/2005/Atom"/></Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

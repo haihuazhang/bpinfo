@@ -1,0 +1,207 @@
+<mvc:View xmlns:core="sap.ui.core" xmlns:mvc="sap.ui.core.mvc" xmlns="sap.m" xmlns:html="http://www.w3.org/1999/xhtml" xmlns:ux="sap.uxap"
+	xmlns:smartField="sap.ui.comp.smartfield" xmlns:smartForm="sap.ui.comp.smartform" xmlns:smartTable="sap.ui.comp.smarttable"
+	xmlns:app="http://schemas.sap.com/sapui5/extension/sap.ui.core.CustomData/1" controllerName="bp.zbpselfservice.controller.detail">
+	<ux:ObjectPageLayout showHeaderContent="true">
+		<ux:headerTitle>
+			<ux:ObjectPageHeader objectTitle="{currentUser>/firstName}" objectSubtitle="{/bpHeadSet/head_np_butype/Text}"
+				objectImageURI="sap-icon://supplier" isObjectIconAlwaysVisible="true" isObjectTitleAlwaysVisible="true" isObjectSubtitleAlwaysVisible="true">
+				<ux:actions>
+					<ux:ObjectPageHeaderActionButton icon="sap-icon://edit" text="修改" tooltip="修改" hideText="false" enabled="{localModel>/Zflage}"
+						press="onEdit"/>
+					<ux:ObjectPageHeaderActionButton icon="sap-icon://display" text="显示" tooltip="显示" hideText="false" enabled="{localModel>/Zflagd}"
+						press="onDisplay"/>
+					<ux:ObjectPageHeaderActionButton icon="sap-icon://save" text="保存" tooltip="保存" hideText="false" enabled="{localModel>/Zflagd}"
+						press="onSave"/>
+				</ux:actions>
+			</ux:ObjectPageHeader>
+		</ux:headerTitle>
+		<ux:headerContent>
+			<!--<layout:VerticalLayout id="oVerticalContent">-->
+			<!--<HBox>-->
+			<!--<ObjectStatus title="制单人" text="{tuiHuoTT>/Ernam}"/>-->
+			<!--</layout:VerticalLayout>-->
+		</ux:headerContent>
+		<ux:sections>
+			<ux:ObjectPageSection title="基本信息">
+				<ux:subSections>
+					<ux:ObjectPageSubSection>
+						<ux:blocks>
+							<smartForm:SmartForm id="smHead" editable="{localModel>/editable}">
+								<!--<smartForm:layout>-->
+								<!--	<smartForm:ColumnLayout columnsM="1" columnsL="2" columnsXL="4"/>-->
+								<!--</smartForm:layout>-->
+								<smartForm:Group>
+									<smartForm:GroupElement>
+										<smartField:SmartField value="{Partner}"/>
+									</smartForm:GroupElement>
+									<smartForm:GroupElement label="姓名">
+										<smartField:SmartField value="{NameLast}" visible="{path:'Type',formatter: '.formatter.checkPersonal' }"/>
+									</smartForm:GroupElement>
+									<smartForm:GroupElement label="名称">
+										<smartField:SmartField value="{NameOrg1}" visible="{path:'Type',formatter: '.formatter.checkOrg' }"/>
+									</smartForm:GroupElement>
+									<smartForm:GroupElement label="类别">
+										<smartField:SmartField value="{Type}"/>
+									</smartForm:GroupElement>
+									<smartForm:GroupElement>
+										<smartField:SmartField value="{Natio}" visible="{path:'Type',formatter: '.formatter.checkPersonal' }"/>
+									</smartForm:GroupElement>
+									<smartForm:GroupElement label="出生日期">
+										<smartField:SmartField value="{Birthdt}" visible="{path:'Type',formatter: '.formatter.checkPersonal' }"/>
+									</smartForm:GroupElement>
+								</smartForm:Group>
+								<smartForm:Group>
+									<smartForm:GroupElement label="证件类型">
+										<smartField:SmartField value="{Idtype}" visible="{path:'Type',formatter: '.formatter.checkPersonal' }"/>
+									</smartForm:GroupElement>
+									<smartForm:GroupElement label="证件号">
+										<smartField:SmartField value="{Bpext}" visible="{path:'Type',formatter: '.formatter.checkPersonal' }"/>
+									</smartForm:GroupElement>
+								</smartForm:Group>
+								<smartForm:Group>
+									<smartForm:GroupElement label="单位">
+										<smartField:SmartField value="{Emplo}" visible="{path:'Type',formatter: '.formatter.checkPersonal' }"/>
+									</smartForm:GroupElement>
+									<smartForm:GroupElement label="职务">
+										<smartField:SmartField value="{Nickname}" visible="{path:'Type',formatter: '.formatter.checkPersonal' }"/>
+									</smartForm:GroupElement>
+									<smartForm:GroupElement label="职称">
+										<smartField:SmartField value="{NameFirst}" visible="{path:'Type',formatter: '.formatter.checkPersonal' }"/>
+									</smartForm:GroupElement>
+									<smartForm:GroupElement label="学历">
+										<smartField:SmartField value="{Initials}" visible="{path:'Type',formatter: '.formatter.checkPersonal' }"/>
+									</smartForm:GroupElement>
+									<smartForm:GroupElement label="学位">
+										<smartField:SmartField value="{TitleRoyl}" visible="{path:'Type',formatter: '.formatter.checkPersonal' }"/>
+									</smartForm:GroupElement>
+									<smartForm:GroupElement label="专业方向/课程">
+										<smartField:SmartField value="{TitleLet}"/>
+									</smartForm:GroupElement>
+								</smartForm:Group>
+								<!--<smartForm:Group>-->
+								<!--</smartForm:Group>-->
+							</smartForm:SmartForm>
+						</ux:blocks>
+					</ux:ObjectPageSubSection>
+				</ux:subSections>
+			</ux:ObjectPageSection>
+			<ux:ObjectPageSection title="税收优惠信息">
+				<ux:subSections>
+					<ux:ObjectPageSubSection>
+						<ux:blocks>
+							<smartForm:SmartForm id="smShuiShou" editable="{localModel>/editable}" visible="{path:'Type',formatter: '.formatter.checkPersonal' }">
+								<smartForm:Group>
+									<smartForm:GroupElement>
+										<smartField:SmartField value="{Zjumin}"/>
+									</smartForm:GroupElement>
+								</smartForm:Group>
+								<smartForm:Group>
+									<smartForm:GroupElement>
+										<smartField:SmartField value="{Zrycj}"/>
+									</smartForm:GroupElement>
+									<smartForm:GroupElement>
+										<smartField:SmartField value="{Zrycjzh}"/>
+									</smartForm:GroupElement>
+								</smartForm:Group>
+								<smartForm:Group>
+									<smartForm:GroupElement>
+										<smartField:SmartField value="{Zryls}"/>
+									</smartForm:GroupElement>
+									<smartForm:GroupElement>
+										<smartField:SmartField value="{Zrylszh}"/>
+									</smartForm:GroupElement>
+								</smartForm:Group>
+								<smartForm:Group>
+									<smartForm:GroupElement>
+										<smartField:SmartField value="{Zrygl}"/>
+									</smartForm:GroupElement>
+								</smartForm:Group>
+							</smartForm:SmartForm>
+						</ux:blocks>
+					</ux:ObjectPageSubSection>
+				</ux:subSections>
+			</ux:ObjectPageSection>
+			<ux:ObjectPageSection title="通讯信息">
+				<ux:subSections>
+					<ux:ObjectPageSubSection>
+						<ux:blocks>
+							<smartForm:SmartForm id="smTongXun" editable="{localModel>/editable}">
+								<smartForm:Group>
+									<smartForm:GroupElement label="国家">
+										<smartField:SmartField value="{Country}"/>
+									</smartForm:GroupElement>
+									<smartForm:GroupElement label="省/地区">
+										<smartField:SmartField value="{Region}"/>
+									</smartForm:GroupElement>
+									<smartForm:GroupElement>
+										<smartField:SmartField value="{City1}"/>
+									</smartForm:GroupElement>
+									<smartForm:GroupElement>
+										<smartField:SmartField value="{PostCode1}"/>
+									</smartForm:GroupElement>
+									<smartForm:GroupElement label="通讯地址">
+										<smartField:SmartField value="{Street}"/>
+									</smartForm:GroupElement>
+								</smartForm:Group>
+								<smartForm:Group>
+									<smartForm:GroupElement>
+										<smartField:SmartField value="{TelNumber}"/>
+										<smartField:SmartField value="{TelExtens}"/>
+									</smartForm:GroupElement>
+									<smartForm:GroupElement>
+										<smartField:SmartField value="{FaxNumber}"/>
+									</smartForm:GroupElement>
+									<smartForm:GroupElement>
+										<smartField:SmartField value="{MobNumber}"/>
+									</smartForm:GroupElement>
+									<smartForm:GroupElement label="Email">
+										<smartField:SmartField value="{SmtpAddr}"/>
+									</smartForm:GroupElement>
+									<smartForm:GroupElement label="稿费单寄送方式">
+										<smartField:SmartField value="{DefltComm}"/>
+									</smartForm:GroupElement>
+								</smartForm:Group>
+							</smartForm:SmartForm>
+						</ux:blocks>
+					</ux:ObjectPageSubSection>
+				</ux:subSections>
+			</ux:ObjectPageSection>
+			<ux:ObjectPageSection title="帐户信息">
+				<ux:subSections>
+					<ux:ObjectPageSubSection>
+						<ux:blocks>
+							<smartTable:SmartTable id="bankDetail" entitySet="bpBankSet" tableBindingPath="head_np_bank" tableType="ResponsiveTable"
+								beforeExport="onBeforeExport" useVariantManagement="false" useTablePersonalisation="false" persistencyKey="SmartTableAnalytical_Explored"
+								enableAutoBinding="true" class="sapUiResponsiveContentPadding" editable="{localModel>/editable}" app:useSmartField="true"/>
+						</ux:blocks>
+					</ux:ObjectPageSubSection>
+				</ux:subSections>
+			</ux:ObjectPageSection>
+			<ux:ObjectPageSection title="其他信息">
+				<ux:subSections>
+					<ux:ObjectPageSubSection mode="Expanded">
+						<ux:blocks>
+							<smartForm:SmartForm id="smQiTa" editable="{localModel>/editable}">
+								<smartForm:Group>
+									<smartForm:GroupElement>
+										<smartField:SmartField value="{Zzresearch}" app:multiLineSettings="{cols: 100, rows: 5}"/>
+									</smartForm:GroupElement>
+									<smartForm:GroupElement>
+										<smartField:SmartField value="{ZzgenerIntro}" app:multiLineSettings="{cols: 100, rows: 5}"/>
+									</smartForm:GroupElement>
+									<smartForm:GroupElement>
+										<smartField:SmartField value="{Zzwork}" app:multiLineSettings="{cols: 100, rows: 5}"/>
+									</smartForm:GroupElement>
+									<smartForm:GroupElement>
+										<smartField:SmartField value="{Zzbz}" app:multiLineSettings="{cols: 100, rows: 5}"/>
+									</smartForm:GroupElement>
+								</smartForm:Group>
+							</smartForm:SmartForm>
+						</ux:blocks>
+					</ux:ObjectPageSubSection>
+				</ux:subSections>
+			</ux:ObjectPageSection>
+		</ux:sections>
+		<ux:footer></ux:footer>
+	</ux:ObjectPageLayout>
+</mvc:View>
